@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace Compilador_JustBati
 {
+    //clase para analizar los lexemas y gestionar la existencia del lenguaje dentro del archivo
     internal class Lex
     { 
         //Metodo para obtener la informacion del archivo y separarla en lineas
@@ -22,7 +23,10 @@ namespace Compilador_JustBati
             for (int i = 0; i < lines.Length; i++)
             {
                 string[] aux = lines[i].Split(' ');
-                words[i] = aux[i];
+                foreach (var item in aux)
+                {
+                words[i] = item;
+                }
             }
             return words;
         }   
