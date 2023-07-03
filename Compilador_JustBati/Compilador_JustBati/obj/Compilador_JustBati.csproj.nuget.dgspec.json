@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Usuario\\Documents\\JustBati\\CompisinFernando\\Compilador_JustBati\\Compilador_JustBati\\Compilador_JustBati.csproj": {}
+    "C:\\Users\\Diablo\\OneDrive\\Documentos\\Compis\\CompisinFernando\\Compilador_JustBati\\Compilador_JustBati\\Compilador_JustBati.csproj": {}
   },
   "projects": {
-    "D:\\Usuario\\Documents\\JustBati\\CompisinFernando\\Compilador_JustBati\\Compilador_JustBati\\Compilador_JustBati.csproj": {
+    "C:\\Users\\Diablo\\OneDrive\\Documentos\\Compis\\CompisinFernando\\Compilador_JustBati\\Compilador_JustBati\\Compilador_JustBati.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Usuario\\Documents\\JustBati\\CompisinFernando\\Compilador_JustBati\\Compilador_JustBati\\Compilador_JustBati.csproj",
+        "projectUniqueName": "C:\\Users\\Diablo\\OneDrive\\Documentos\\Compis\\CompisinFernando\\Compilador_JustBati\\Compilador_JustBati\\Compilador_JustBati.csproj",
         "projectName": "Compilador_JustBati",
-        "projectPath": "D:\\Usuario\\Documents\\JustBati\\CompisinFernando\\Compilador_JustBati\\Compilador_JustBati\\Compilador_JustBati.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Usuario\\Documents\\JustBati\\CompisinFernando\\Compilador_JustBati\\Compilador_JustBati\\obj\\",
+        "projectPath": "C:\\Users\\Diablo\\OneDrive\\Documentos\\Compis\\CompisinFernando\\Compilador_JustBati\\Compilador_JustBati\\Compilador_JustBati.csproj",
+        "packagesPath": "C:\\Users\\Diablo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Diablo\\OneDrive\\Documentos\\Compis\\CompisinFernando\\Compilador_JustBati\\Compilador_JustBati\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
