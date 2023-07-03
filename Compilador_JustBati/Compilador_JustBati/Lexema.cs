@@ -32,7 +32,7 @@ namespace Compilador_JustBati
         }   
         public bool Is_ID(string word)
         {
-            Regex regex = new Regex(@"^[a-zA-Z][a-zA-Z0-9]*$");
+            Regex regex = new Regex(@"^[A-Za-z_][A-Za-z0-9_]*$");
             Match match = regex.Match(word);
             if (match.Success)
             {
