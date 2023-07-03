@@ -30,16 +30,67 @@ namespace Compilador_JustBati
             }
             return words;
         }
-        public bool Is_ID(string word)
+
+        public static bool Check_Parentheses(string input)
         {
-            Regex regex = new Regex(@"^[A-Za-z_][A-Za-z0-9_]*$");
-            return regex.IsMatch(word);
+            Stack<char> stack = new Stack<char>();
+            foreach (char c in input)
+            {
+                if (c == '(')
+                {
+                    stack.Push(c);
+                }
+                else if (c == ')')
+                {
+                    if (stack.Count == 0 || stack.Peek() != '(')
+                    {
+                        return false; // mismatched closing parenthesis
+                    }
+                    stack.Pop();
+                }
+            }
+
+            public static bool Check_Keys(string input)
+            {
+                Stack<char> stack = new Stack<char>();
+                foreach (char c in input)
+                {
+                    if (c == '{')
+                    {
+                        stack.Push(c);
+                    }
+                    else if (c == '}')
+                    {
+                        if (stack.Count == 0 || stack.Peek() != '{')
+                        {
+                            return false; // mismatched closing 
+                        }
+                        stack.Pop();
+                    }
+                }
+
+                public static bool Check_Corch(string input)
+                {
+                    Stack<char> stack = new Stack<char>();
+                    foreach (char c in input)
+                    {
+                        if (c == '[')
+                        {
+                            stack.Push(c);
+                        }
+                        else if (c == ']')
+                        {
+                            if (stack.Count == 0 || stack.Peek() != '[')
+                            {
+                                return false; // mismatched closing 
+                            }
+                            stack.Pop();
+                        }
+                    }
+                    return stack.Count == 0; // true if all  are closed
         }
-        public bool Is_Num(string word)
-        {
-            Regex regex = new Regex(@"^[0-9]+$");
-            return regex.IsMatch(word);
-        }
+    }
+       //Metodos generales para identificar los lexemas
         public bool Is_Op(string word)
         {
             Regex regex = new Regex(@"^[+|-|*|/|=|<|>|!|&]$");
@@ -52,7 +103,7 @@ namespace Compilador_JustBati
         }
         public bool Is_Res(string word)
         {
-            Regex regex = new Regex(@"^(if|else|while|do|for|switch|case|break|continue|return|true|false|void|int|float|char|bool)$");
+            Regex regex = new Regex(@"^(begin|end|if|then|while|do|const|int|procedure|out|in|else|var|call|print|return|block|fun|ODD|class)$");
             return regex.IsMatch(word);
         }
         public bool Is_Com(string word)
@@ -61,7 +112,22 @@ namespace Compilador_JustBati
             return regex.IsMatch(word);
         }
 
-        // New methods
+        // Metodos unitarios para identificar los lexemas (tokens)
+        public bool Is_ID(string word)
+        {
+            Regex regex = new Regex(@"^[A-Za-z_][A-Za-z0-9_]*$");
+            return regex.IsMatch(word);
+        }
+        public bool Is_Num(string word)
+        {
+            Regex regex = new Regex(@"^[0-9]+$");
+            return regex.IsMatch(word);
+        }
+        public bool Is_class(string word)
+        {
+            Regex regex = new Regex(@"^class$");
+            return regex.IsMatch(word);
+        }
         public bool Is_Begin(string word)
         {
             Regex regex = new Regex(@"^begin$");
@@ -275,6 +341,15 @@ namespace Compilador_JustBati
         public bool Is_Update(string word)
         {
             Regex regex = new Regex(@"^:=$");
+            return regex.IsMatch(word);
+        }
+        public bool Is_key_o(string word) {
+            Regex regex = new Regex(@"^{$");
+            return regex.IsMatch(word);
+        }
+        public bool Is_key_c(string word)
+        {
+            Regex regex = new Regex(@"^$");
             return regex.IsMatch(word);
         }
     }

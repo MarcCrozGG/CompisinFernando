@@ -12,12 +12,13 @@ namespace Compilador_JustBati
         Lex lexema = new Lex();
         public bool Is_on_rule(string word)
         {
-            if (lexema.Is_ID(word) || lexema.Is_Num(word) || lexema.Is_Op(word) || lexema.Is_Sep(word) || lexema.Is_Res(word) || lexema.Is_Com(word))
+            if (lexema.Is_ID(word) && lexema.Is_Num(word) && lexema.Is_Op(word) && lexema.Is_Sep(word) && lexema.Is_Res(word) && lexema.Is_Com(word) && lexema.Check_Parentheses(word) && lexema.Check_Keys(word)&& lexema.Check_Corch(word))
             {
                 return true;
             }
             else
             {
+                console.writeline(" Perro malparido codigo no corre");
                 return false;
             }
         }
